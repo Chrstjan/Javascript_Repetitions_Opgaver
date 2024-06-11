@@ -7,6 +7,12 @@
   padding: 8px;
   margin: 16px;
 }
+.mainContainer #L1_2.hide-element {
+  display: none;
+}
+.mainContainer .hidden-message {
+  display: none;
+}
 .mainContainer span {
   display: block;
   margin: 16px;
@@ -14,6 +20,9 @@
 .mainContainer h1 {
   text-align: center;
   font-size: 2.4rem;
+}
+.mainContainer h4.change-color {
+  color: yellow;
 }
 
 body {

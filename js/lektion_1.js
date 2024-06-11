@@ -14,6 +14,84 @@ function fullName(firstName, lastName) {
 }
 
 // Opgave 2
+const hideElement = () => {
+  L1_2.addEventListener("click", () => {
+    L1_2.classList.toggle("hide-element");
+    console.log("lol");
+  });
+};
+
+//Opgave 3
+const changeColor = () => {
+  const colorBtn = document.createElement("button");
+  colorBtn.classList.add("color-btn");
+  colorBtn.textContent = "Change Color";
+
+  L1_3.appendChild(colorBtn);
+
+  let colorMessage = document.createElement("p");
+  colorMessage.classList.add("hidden-message");
+  colorMessage.textContent = "Changed Color";
+  L1_3.appendChild(colorMessage);
+
+  colorBtn.addEventListener("click", () => {
+    let headerText = document.querySelector("#L1_3 h4");
+    headerText.classList.toggle("change-color");
+
+    colorMessage.classList.toggle("hidden-message");
+    console.log("Color");
+  });
+};
+
+//Opgave 4
+const clickCounter = () => {
+  let clickAmount = 0;
+
+  const clickMessage = document.createElement("p");
+  clickMessage.textContent = `${clickAmount} Clicks`;
+
+  const clickBtn = document.createElement("button");
+  clickBtn.textContent = "Click Me";
+
+  L1_4.appendChild(clickMessage);
+  L1_4.appendChild(clickBtn);
+
+  clickBtn.addEventListener("click", () => {
+    clickAmount++;
+    clickMessage.textContent = `${clickAmount} Clicks`;
+    console.log(clickAmount);
+  });
+};
+
+//Opgave 5
+const wordLength = (word) => {
+  const userWord = document.createElement("h3");
+  userWord.textContent = word;
+
+  // console.log(word.length);
+
+  const wordLength = document.createElement("p");
+  wordLength.textContent = `Your words length: ${word.length} Characters`;
+
+  L1_5.appendChild(userWord);
+  L1_5.appendChild(wordLength);
+};
+
+//Opgave 6
+const filterWord = (word) => {
+  //gi for global ignore so it does it for each word
+  const filteredWord = word.replace(/[aeiouæøå]/gi, "");
+
+  const newWord = document.createElement("p");
+  newWord.textContent = filteredWord;
+
+  L1_6.appendChild(newWord);
+};
 
 // Function Calls
-fullName("Ukendt", "Person");
+fullName("Banjo", "Joe");
+hideElement();
+changeColor();
+clickCounter();
+wordLength("Banjo Joe");
+filterWord("Abemad");

@@ -92,9 +92,44 @@ const randRgbColor = () => {
   });
 };
 
+//Opgave 6 bonus opgave
+const randInputColor = (string, domElement) => {
+  console.log(string);
+
+  const domElm = document.createElement(`${domElement}`);
+  domElm.textContent = "Color changes with user input";
+
+
+  switch(true) {
+    case string == "Red":
+      domElm.style.color = "red";
+      console.log("red");
+      break;
+    case string == "Blue":
+      domElm.style.color = "blue";
+        break;
+    case string == "Green":
+      domElm.style.color = "green";
+          break;
+    case string == "Yellow":
+      domElm.style.color = "yellow";
+          break;
+    case string == "Purple":
+      domElm.style.color = "purple";
+      break;
+    default:
+      domElm.style.color = `rgb(${randRgbColorNum()}, ${randRgbColorNum()}, ${randRgbColorNum()})`;
+      console.log("Random color");
+      break;
+  }
+  L2_5.appendChild(domElm);
+}
+
+
 //Calling functions
-checkInputType("Lorem Ipsum");
+checkInputType(123);
 checkEmail("none@fake.com");
 checkStringLength("Lorem Imsum");
 randNumber(4, 32);
 randRgbColor();
+randInputColor("", "p");

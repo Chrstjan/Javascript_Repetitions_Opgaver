@@ -17,7 +17,6 @@ function fullName(firstName, lastName) {
 const hideElement = () => {
   L1_2.addEventListener("click", () => {
     L1_2.classList.toggle("hide-element");
-    console.log("lol");
   });
 };
 
@@ -80,13 +79,20 @@ const wordLength = (word) => {
 //Opgave 6
 const filterWord = (word) => {
   //gi for global ignore so it does it for each word
-  const filteredWord = word.replace(/[aeiouæøå]/gi, "");
+  const filteredWord = word.replace(/[aeiouyæøå]/gi, "");
 
   const newWord = document.createElement("p");
   newWord.textContent = filteredWord;
 
   L1_6.appendChild(newWord);
 };
+
+const createElement = (userCreatedElement) => {
+  const userElement = document.createElement(`${userCreatedElement}`);
+  userElement.textContent = `Your created ${userCreatedElement} element!`;
+
+  L1_6.appendChild(userElement);
+}
 
 // Function Calls
 fullName("Banjo", "Joe");
@@ -95,3 +101,4 @@ changeColor();
 clickCounter();
 wordLength("Banjo Joe");
 filterWord("Abemad");
+createElement("div");

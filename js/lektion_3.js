@@ -33,7 +33,7 @@ L3_1.appendChild(studentMessage);
 addStudentBtn.addEventListener("click", () => {
 
     if (webDevClass.students.includes("Jonas")) {
-        console.log("Fuck Jonas");
+        console.log("Fuck all the other Jonas beside the one at our table");
         studentMessage.classList.remove("hidden");
         studentMessage.innerText = "Jonas findes allerede i elever!";
     }
@@ -69,3 +69,31 @@ function showClassInfo() {
 }
 
 showClassInfo();
+
+function plusNumbers() {
+    let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8,  9, 10];
+    
+    let numberSum = numbersArray.reduce((addTogether, numbersToAdd) => {
+        return addTogether + numbersToAdd;
+    });
+
+    console.log(numberSum);
+
+    let numberAddedTogether = document.createElement("h3");
+    numberAddedTogether.innerText = `Tal sammenlagt: ${numberSum}`;
+
+    L3_2.appendChild(numberAddedTogether);
+}
+
+plusNumbers();
+
+function showObjectKeys() {
+     for (const property in webDevClass) {
+        let objectKeys = document.createElement("p");
+        objectKeys.innerText = `${property}: ${webDevClass[property]}`;
+
+        L3_3.appendChild(objectKeys);
+    }
+}
+
+showObjectKeys();

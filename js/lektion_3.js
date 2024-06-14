@@ -9,9 +9,9 @@ const webDevClass = {
     classroom: "p025",
     students: [
         "Christian",
+        "Evelina",
         "Jack",
-        "Peter",
-        "Evelina"
+        "Peter"
     ],
     createStudent(studentName) {
         this.students.push(studentName);
@@ -33,7 +33,7 @@ L3_1.appendChild(studentMessage);
 addStudentBtn.addEventListener("click", () => {
 
     if (webDevClass.students.includes("Jonas")) {
-        console.log("Fuck all the other Jonas beside the one at our table");
+        console.log("Fuck Jonas");
         studentMessage.classList.remove("hidden");
         studentMessage.innerText = "Jonas findes allerede i elever!";
     }
@@ -78,6 +78,12 @@ function plusNumbers() {
     });
 
     console.log(numberSum);
+    
+    numbersArray.forEach((number) => {
+        let allNumbers = document.createElement("p");
+        allNumbers.innerText = number;
+        L3_2.appendChild(allNumbers);
+    })
 
     let numberAddedTogether = document.createElement("h3");
     numberAddedTogether.innerText = `Tal sammenlagt: ${numberSum}`;
@@ -87,13 +93,13 @@ function plusNumbers() {
 
 plusNumbers();
 
-function showObjectKeys() {
-     for (const property in webDevClass) {
+function showObjectKeys(dataObject) {
+     for (const property in dataObject) {
         let objectKeys = document.createElement("p");
-        objectKeys.innerText = `${property}: ${webDevClass[property]}`;
+        objectKeys.innerText = `${property}: ${dataObject[property]}`;
 
         L3_3.appendChild(objectKeys);
     }
 }
 
-showObjectKeys();
+showObjectKeys(webDevClass);

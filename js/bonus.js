@@ -44,4 +44,25 @@ const randInputColorBonus = (string, domElement) => {
     bonus.appendChild(userElement);
   }
 
+  const randSentance = () => {
+    const navnWordsArr = ["Jeg", "Han", "Hun", "Dem", "De"];
+    const tilWordsArr = ["kaster", "tegner", "giver", "henter"];
+    const udWordsArr = ["vand", "maling", "fyrværkeri"];
+
+    let randNavnIndex = Math.floor(Math.random() * navnWordsArr.length);
+    let randTilIndex = Math.floor(Math.random() * tilWordsArr.length);
+    let randUdIndex = Math.floor(Math.random() * udWordsArr.length);
+
+    let randNavnWord = navnWordsArr[randNavnIndex]
+    let randTilWord = tilWordsArr[randTilIndex];
+    let randUdWord = udWordsArr[randUdIndex];
+
+    let randSentanceWord = document.createElement("h3");
+    randSentanceWord.textContent = `${randNavnWord} ${randTilWord} ${randUdWord}`;
+    bonus.appendChild(randSentanceWord);
+
+  }
+
+  randSentance();
+
   createFunkyElement("article");

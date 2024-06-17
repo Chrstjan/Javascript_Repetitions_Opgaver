@@ -13,6 +13,50 @@
     display: none;
   }
 
+  #L4_5 {
+    // position: relative;
+  }
+
+  .toast-container {
+    position: fixed;
+  }
+
+  .toast-container.sucess-message {
+      background: green;
+    }
+
+    .toast-container.warning-message {
+      background: red;
+    }
+
+    .toast-container.error-message {
+      background: orange;
+    }
+
+  .toast-container.top-left {
+    top: 2%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+  }
+
+  .toast-container.top-right {
+    top: 2%;
+    right: -2%;
+    transform: translate(-50%, -50%);
+  }
+
+  .toast-container.bottom-left {
+    bottom: -2%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+  }
+
+  .toast-container.bottom-right {
+    bottom: -2%;
+    right: 2%;
+    transform: translate(-50%, -50%);
+  }
+
   .hidden-message {
     display: none;
   }

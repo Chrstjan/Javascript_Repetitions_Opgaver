@@ -70,7 +70,6 @@ stopWatch();
 //Opgave 4
 function checkScrollLength() {
     let scrollMessage = document.createElement("p");
-    scrollMessage.innerHTML = `You have scrolled %`;
     L4_4.appendChild(scrollMessage);
     window.addEventListener("scroll", () => {
         let scrollTop = window.scrollY;
@@ -88,3 +87,54 @@ function checkScrollLength() {
 }
 
 checkScrollLength();
+
+//Opgave 5
+const showToastbar = (message, time, position, severity) => {
+    const toastbarContainer = document.createElement("div");
+    toastbarContainer.classList = "toast-container";
+
+    const toastbarMessage = document.createElement("p");
+    toastbarMessage.innerHTML = `${message}`;
+
+    toastbarContainer.appendChild(toastbarMessage);
+
+    L4_5.appendChild(toastbarContainer);
+
+    switch (true) {
+        case severity == "sucess":
+            toastbarContainer.classList.toggle("sucess-message");
+            console.log(toastbarContainer);
+            break;
+        case severity == "warning":
+            toastbarContainer.classList.toggle("warning-message");
+            break;
+        case severity == "error":
+            toastbarContainer.classList.toggle("error-message");
+            break;
+        default:
+            console.error(`Besked ikke modtaget`);
+            break;
+    }
+
+    switch (true) {
+        case position == "tLeft":
+            toastbarContainer.classList.toggle("top-left");
+            break;
+        case position == "tRight":
+            toastbarContainer.classList.toggle("top-right");
+            break;
+        case position == "bLeft":
+            toastbarContainer.classList.toggle("bottom-left");
+            break;
+        case position == "bRight":
+            toastbarContainer.classList.toggle("bottom-right");
+        default:
+            break;
+    }
+
+    setTimeout(() => {
+        L4_5.removeChild(toastbarContainer);
+    }, time)
+}
+
+showToastbar("Toastbar!!!", 3000, "bRight", "sucess");

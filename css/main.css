@@ -1,0 +1,68 @@
+.hidden {
+  opacity: 0;
+}
+
+.mainContainer div {
+  border: solid 2px rgb(77, 77, 77);
+  padding: 8px;
+  margin: 16px;
+}
+.mainContainer #L1_2.hidden {
+  display: none;
+}
+.mainContainer .toast-container {
+  position: fixed;
+}
+.mainContainer .toast-container.sucess-message {
+  background: green;
+}
+.mainContainer .toast-container.warning-message {
+  background: red;
+}
+.mainContainer .toast-container.error-message {
+  background: orange;
+}
+.mainContainer .toast-container.top-left {
+  top: 2%;
+  left: 2%;
+  transform: translate(-50%, -50%);
+}
+.mainContainer .toast-container.top-right {
+  top: 2%;
+  right: -2%;
+  transform: translate(-50%, -50%);
+}
+.mainContainer .toast-container.bottom-left {
+  bottom: -2%;
+  left: 2%;
+  transform: translate(-50%, -50%);
+}
+.mainContainer .toast-container.bottom-right {
+  bottom: -2%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+}
+.mainContainer .hidden-message {
+  display: none;
+}
+.mainContainer span {
+  display: block;
+  margin: 16px;
+}
+.mainContainer h1 {
+  text-align: center;
+  font-size: 2.4rem;
+}
+.mainContainer h4.change-color {
+  color: yellow;
+}
+
+body {
+  font-family: monospace;
+  max-width: 968px;
+  background-color: rgb(45, 45, 45);
+  color: white;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}

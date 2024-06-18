@@ -4,8 +4,8 @@ let L5_3 = document.querySelector("#L5_3");
 let L5_4 = document.querySelector("#L5_4");
 let L5_5 = document.querySelector("#L5_5");
 
-//Opgave 1 & Opgave 4
-const fetchData = async (endpoint, options = {}) => {
+//Opgave 1, Opgave 4 & Opgave 5
+const fetchData = async (endpoint, options) => {
     let response = "";
 
     try {

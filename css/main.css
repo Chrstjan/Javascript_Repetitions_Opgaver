@@ -42,6 +42,9 @@
   right: 2%;
   transform: translate(-50%, -50%);
 }
+.mainContainer .product-figure img {
+  width: 10vw;
+}
 .mainContainer .hidden-message {
   display: none;
 }

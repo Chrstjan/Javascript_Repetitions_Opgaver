@@ -137,4 +137,4 @@ const showToastbar = (message, time, position, severity) => {
     }, time)
 }
 
-showToastbar("Toastbar!!!", 3000, "bRight", "sucess");
+showToastbar("Toastbar!!!", 3000, "tLeft", "error");
